@@ -1,0 +1,16 @@
+<%-include("includes/head.ejs"); %>
+<body>
+    
+    <h1>Name:- <%= fbData.first_name %> &nbsp;<%= fbData.last_name %></h1>
+    <h2> Age<%= fbData.age %></h2>
+    <p>Address:
+        <ul>
+            <% for(const [key,value] of Object.entries(fbData.address)){ %>
+                <li><%= key %> : <%= value %></li>
+            <% } %>
+        </ul>
+    </p>
+    
+
+</body>
+</html>
